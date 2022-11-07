@@ -1,0 +1,36 @@
+.navbar{
+  color: black;
+  display:flex;
+  margin: 0;
+  padding: 3px;
+  font-family: serif;
+}
+.navbar ul{
+  margin-left: 40%;
+  display: flex;
+}
+.navbar ul li{
+  list-style: none;
+  padding-right:85px;
+  margin:0px 5px;
+}
+.navbar ul li a{
+ text-decoration:double pink;
+ color: gray;
+ text-align: center;
+ padding: 0px 10px 10px 30px;
+ margin-bottom: 20px;
+ font-size: 17px;
+}
+.navbar ul li a:hover{
+  color: rgb(143, 0, 143);
+  border-bottom: 1px solid rgb(143, 0, 143);
+}
+
+img{
+  height: 80px;
+}
+
+
+/*Home Component Code */
+
