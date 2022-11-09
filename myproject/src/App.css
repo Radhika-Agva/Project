@@ -1,36 +1,259 @@
+/*Navbar code*/
 .navbar{
-  color: black;
+  color: #444444;
   display:flex;
   margin: 0;
-  padding: 3px;
-  font-family: serif;
+  font-family:"Poppins";
 }
 .navbar ul{
-  margin-left: 40%;
   display: flex;
+  margin-left:40%;
+  margin-top: 0px;
+  padding:0px;
 }
 .navbar ul li{
   list-style: none;
-  padding-right:85px;
-  margin:0px 5px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 15px;
 }
 .navbar ul li a{
  text-decoration:double pink;
- color: gray;
- text-align: center;
- padding: 0px 10px 10px 30px;
- margin-bottom: 20px;
- font-size: 17px;
+ color: #444444;
+ padding: 0;margin: 0;
 }
-.navbar ul li a:hover{
-  color: rgb(143, 0, 143);
-  border-bottom: 1px solid rgb(143, 0, 143);
+.navbar ul li a.active, a:hover{
+  color:#cb297b;
+  border-bottom: 1px solid #cb297b;
 }
 
-img{
-  height: 80px;
+.logo{
+  margin-top: 5px;
+  height: 50px;
+  width: 300px;
+  margin-left: 30px;
 }
+.checkbtn{
+  margin-top: 18px;
+  font-size: 25px;
+  color: #444444;
+  float: right;
+  line-height: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
 
 
 /*Home Component Code */
+img{
+  height:auto;
+  width: 100%;
+}
+video{
+   height: auto;
+   width: 100%;
 
+}
+@media (min-width: 1200px) and (max-width: 1500px) 
+{
+  .navbar{
+    color: black;
+    display:flex;
+    margin: 0;
+    font-family:"Poppins";
+  }
+  .navbar ul{
+    display: flex;
+    margin-left:15%;
+    margin-top: 0px;
+    padding:0px;
+  }
+  .navbar ul li{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 15px;
+  }
+  .navbar ul li a{
+   text-decoration:double pink;
+   color: #444444;
+   padding: 0;margin: 0;
+  }
+  .navbar ul li a:hover{
+    color:#cb297b;
+    border-bottom: 1px solid #cb297b;
+  }
+  .logo{
+    height: 80px;
+    width: 300px;
+  }
+  
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .navbar{
+    color: black;
+    display:flex;
+    margin: 0;
+    font-family: "Poppins";
+  }
+  .navbar ul{
+    display: flex;
+    margin-left:5%;
+    margin-top: 0px;
+    padding:0px;
+  }
+  .navbar ul li{
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .navbar ul li a{
+   text-decoration:double pink;
+   color:#444444;
+   padding: 0;margin: 0;
+  }
+  .navbar ul li a:hover{
+    color: #cb297b;
+    border-bottom: 1px solid #cb297b;
+  }
+}
+@media (min-width: 700px) and (max-width: 900px){
+  .navbar{
+    color: black;
+    display:flex;
+    margin: 0;
+    font-family: "Poppins";
+  }
+  .navbar ul{
+    display: flex;
+    margin-left:1%;
+    margin-top: 0px;
+    padding:0px;
+  }
+  .navbar ul li{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 15px;
+  }
+  .navbar ul li a{
+   text-decoration:double pink;
+   color: #444444;
+   padding: 0;margin: 0;
+  }
+  .navbar ul li a:hover{
+    color: #cb297b;
+    border-bottom: 1px solid #cb297b;
+  }
+  .logo{
+    height: 50px;
+    width: 300px;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px){
+  .navbar{
+    color: black;
+    display:flex;
+    margin: 0;
+    font-family:"Poppins";
+  }
+  .navbar ul{
+    display: flex;
+    margin-left:2%;
+    margin-top: 0px;
+    padding:0px;
+  }
+  .navbar ul li{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+  .navbar ul li a{
+   text-decoration:double pink;
+   color: #444444;
+   padding: 0;margin: 0;
+  }
+  .navbar ul li a:hover{
+    color: #cb297b;
+    border-bottom: 1px solid #cb297b;
+  }
+  .logo{
+    height: 70px;
+    width: 180px;
+  }
+}
+@media (min-width: 300px) and (max-width: 500px){
+  .navbar{
+    color: black;
+    display:flex;
+    margin: 0;
+    font-family:"Poppins";
+  }
+  .navbar ul{
+    display: flex;
+    margin-left:1%;
+    margin-top: 0px;
+    padding:0px;
+  }
+  .navbar ul li{
+    list-style: none;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right: 15px;
+    display: none;
+  }
+  .navbar ul li a{
+   text-decoration:double pink;
+   color: #444444;
+   padding: 0;margin: 0;
+  }
+  .navbar ul li a:hover{
+    color: #cb297b;
+    border-bottom: 1px solid #cb297b;
+  }
+  .logo{
+    height: 50px;
+    width: 300px;
+
+  }
+  .checkbtn{
+    margin-top: 18px;
+    font-size: 25px;
+    color: #444444;
+    float: right;
+    line-height: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+  
+}
+
+@media(max-width: 300px){
+  .navbar ul li{
+    display: none;
+  }
+  .logo{
+    margin-top: 5px;
+    height: 50px;
+    width: 150px;
+    margin-left: 10px;
+  }
+  .navbar ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #444444;
+    right: 0;
+    text-align: center;
+  }
+}
