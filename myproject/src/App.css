@@ -1,4 +1,10 @@
 /*Navbar code*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
 .navbar{
   color: #444444;
   display:flex;
@@ -18,13 +24,15 @@
   margin-right: 15px;
 }
 .navbar ul li a{
- text-decoration:double pink;
+ text-decoration:none;
  color: #444444;
  padding: 0;margin: 0;
+ letter-spacing: 1px;
+ transition: all 0.3s ease;
 }
 .navbar ul li a.active, a:hover{
   color:#cb297b;
-  border-bottom: 1px solid #cb297b;
+  display: block;
 }
 
 .logo{
@@ -33,20 +41,16 @@
   width: 300px;
   margin-left: 30px;
 }
-.checkbtn{
-  margin-top: 18px;
-  font-size: 25px;
-  color: #444444;
-  float: right;
-  line-height: 10px;
-  margin-left: 20px;
+.navbar .menu-btn i{
+  color:#444444;
+  font-size: 22px;
   cursor: pointer;
   display: none;
 }
-#check{
+
+input[type="checkbox"]{
   display: none;
 }
-
 
 
 /*Home Component Code */
@@ -190,53 +194,62 @@ video{
   }
 }
 @media (min-width: 300px) and (max-width: 500px){
-  .navbar{
-    color: black;
-    display:flex;
-    margin: 0;
-    font-family:"Poppins";
-  }
-  .navbar ul{
-    display: flex;
-    margin-left:1%;
-    margin-top: 0px;
-    padding:0px;
-  }
-  .navbar ul li{
-    list-style: none;
-    margin-top: 20px;
-    margin-left: 5px;
-    margin-right: 15px;
-    display: none;
-  }
-  .navbar ul li a{
-   text-decoration:double pink;
-   color: #444444;
-   padding: 0;margin: 0;
-  }
   .navbar ul li a:hover{
     color: #cb297b;
-    border-bottom: 1px solid #cb297b;
+    display: block;
   }
   .logo{
     height: 50px;
     width: 300px;
+    margin-left: 2px;
 
   }
-  .checkbtn{
-    margin-top: 18px;
-    font-size: 25px;
+  .navbar .menu-btn i{
+    display: block;
+    margin-left: 40px;
+    margin-top: 10px;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  .navbar ul{
+    margin-right:10%;
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    right: 0;
+  }
+  .navbar ul li{
+    width: 100%;
+    margin: 40px 90px;
+  }
+  .navbar ul li a{
+    width: 100%;
+    text-align: center;
     color: #444444;
-    float: right;
-    line-height: 10px;
-    margin-left: 20px;
-    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-decoration: none;
+    color: #444444;
   }
-  #check{
-    display: none;
+  #click:checked ~ ul li a{
+    margin-left: 0px;
   }
-  
+  .navbar ul li a.active,
+  .navbar ul li a:hover{
+    background: none;
+   color:#cb297b;
+
+  }
 }
+
 
 @media(max-width: 300px){
   .navbar ul li{
@@ -248,12 +261,9 @@ video{
     width: 150px;
     margin-left: 10px;
   }
-  .navbar ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #444444;
-    right: 0;
-    text-align: center;
+  .navbar .menu-btn i{
+    display: block;
+    margin-left: 40px;
+    margin-top: 10px;
   }
 }
